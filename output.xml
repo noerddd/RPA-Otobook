@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.11 on win32)" generated="2024-09-10T10:51:14.063427" rpa="false" schemaversion="5">
+<suite id="s1" name="Tasks" source="D:\Robocorp-projects\testing\..\..\..\Robocorp-projects\testing\tasks.robot">
+<test id="s1-t1" name="Get JSON Data From API" line="15">
+<kw name="Open website">
+<kw name="Open Available Browser" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:18.326655" level="INFO">Downloaded webdriver to: C:\Users\dafiq\AppData\Local\robocorp\webdrivers\.wdm\drivers\chromedriver\win64\128.0.6613.119\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver</msg>
+<msg time="2024-09-10T10:51:18.357626" level="WARN">Webdriver version couldn't be read due to: [WinError 193] %1 is not a valid Win32 application</msg>
+<msg time="2024-09-10T10:51:18.357626" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-09-10T10:51:18.444621" level="WARN">The custom provided browser (C:\Program Files\Mozilla Firefox\firefox.exe) might be incompatible with the default downloaded webdriver. Use ``Open Browser`` with these `options` and a compatible `executable_path` if running into issues.</msg>
+<msg time="2024-09-10T10:51:18.748085" level="WARN">The custom provided browser (C:\Program Files\Mozilla Firefox\firefox.exe) might be incompatible with the default downloaded webdriver. Use ``Open Browser`` with these `options` and a compatible `executable_path` if running into issues.</msg>
+<msg time="2024-09-10T10:51:20.633849" level="INFO">Downloaded webdriver to: C:\Users\dafiq\AppData\Local\robocorp\webdrivers\.wdm\drivers\geckodriver\win64\v0.35.0\geckodriver.exe</msg>
+<msg time="2024-09-10T10:51:20.651199" level="INFO">Webdriver version taken into use: geckodriver 0.35.0 (9f0a0036bea4 2024-08-03 07:11 +0000)
+
+The source code of this program is available from
+testing/geckodriver in https://hg.mozilla.org/mozilla-central.
+
+This program is subject to the terms of the Mozilla Public License 2.0.
+You can obtain a copy of the license at https://mozilla.org/MPL/2.0/.
+</msg>
+<msg time="2024-09-10T10:51:20.651199" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<msg time="2024-09-10T10:51:26.898809" level="INFO">Created Firefox browser (version 130.0) with arguments: </msg>
+<msg time="2024-09-10T10:51:26.898809" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: Webdriver executable 'chromedriver' is not in PATH (with disabled Selenium Manager)
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;[WinError 193] %1 is not a valid Win32 application&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Firefox&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: Webdriver executable 'geckodriver' is not in PATH (with disabled Selenium Manager)
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Firefox&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2024-09-10T10:51:26.898809" level="INFO">Opening url 'http://localhost/inlislite3/backend/site/login'</msg>
+<arg>http://localhost/inlislite3/backend/site/login</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<status status="PASS" start="2024-09-10T10:51:15.714833" elapsed="15.416055"/>
+</kw>
+<status status="PASS" start="2024-09-10T10:51:15.712833" elapsed="15.418055"/>
+</kw>
+<kw name="Login website">
+<kw name="Input Text" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:31.131892" level="INFO">Typing text 'inlislite' into text field 'id:loginform-username'.</msg>
+<arg>id:loginform-username</arg>
+<arg>inlislite</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:31.130888" elapsed="0.113893"/>
+</kw>
+<kw name="Input Text" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:31.246282" level="INFO">Typing text 'inlislite=' into text field 'id:loginform-password'.</msg>
+<arg>id:loginform-password</arg>
+<arg>inlislite=</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:31.246282" elapsed="0.027443"/>
+</kw>
+<kw name="Click Button" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:31.274725" level="INFO">Clicking button 'name:login-button'.</msg>
+<arg>name:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:31.273725" elapsed="0.248187"/>
+</kw>
+<status status="PASS" start="2024-09-10T10:51:31.130888" elapsed="0.391024"/>
+</kw>
+<kw name="Select Library Location">
+<kw name="Wait Until Element Is Visible" owner="RPA.Browser.Selenium">
+<arg>xpath=//span[@id="select2-dynamicmodel-location-container"]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-10T10:51:31.523158" elapsed="1.141628"/>
+</kw>
+<kw name="Click Element" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:32.664786" level="INFO">Clicking element 'xpath=//span[@id="select2-dynamicmodel-location-container"]'.</msg>
+<arg>xpath=//span[@id="select2-dynamicmodel-location-container"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:32.664786" elapsed="0.227245"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="RPA.Browser.Selenium">
+<arg>xpath=//li[contains(text(), 'Perpustakaan Pusat')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-10T10:51:32.892031" elapsed="0.009293"/>
+</kw>
+<kw name="Click Element" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:32.901324" level="INFO">Clicking element 'xpath=//li[contains(text(), 'Perpustakaan Pusat')]'.</msg>
+<arg>xpath=//li[contains(text(), 'Perpustakaan Pusat')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:32.901324" elapsed="0.722649"/>
+</kw>
+<status status="PASS" start="2024-09-10T10:51:31.523158" elapsed="2.100815"/>
+</kw>
+<kw name="Click Submit Button">
+<kw name="Click Button When Visible" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:33.635995" level="INFO">Clicking button '//button[@class="btn btn-primary btn-block btn-flat button_login"]'.</msg>
+<arg>//button[@class="btn btn-primary btn-block btn-flat button_login"]</arg>
+<doc>Click button identified by ``locator``, once it becomes visible.</doc>
+<status status="PASS" start="2024-09-10T10:51:33.624993" elapsed="0.233077"/>
+</kw>
+<status status="PASS" start="2024-09-10T10:51:33.624993" elapsed="0.233077"/>
+</kw>
+<kw name="Navigate to Entri Katalog">
+<kw name="Wait Until Element Is Visible" owner="RPA.Browser.Selenium">
+<arg>xpath=//li[@class="treeview"]/a[contains(@href, '/pengkatalogan/katalog/index')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-10T10:51:33.858070" elapsed="1.805417"/>
+</kw>
+<kw name="Click Element" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:35.664486" level="INFO">Clicking element 'xpath=//li[@class="treeview"]/a[contains(@href, '/pengkatalogan/katalog/index')]'.</msg>
+<arg>xpath=//li[@class="treeview"]/a[contains(@href, '/pengkatalogan/katalog/index')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:35.663487" elapsed="0.222200"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="RPA.Browser.Selenium">
+<arg>xpath=//li/a[@href='/inlislite3/backend/pengkatalogan/katalog/create?for=cat&amp;rda=0']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-10T10:51:35.885687" elapsed="0.010578"/>
+</kw>
+<kw name="Click Element" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:35.898144" level="INFO">Clicking element 'xpath=//li/a[@href='/inlislite3/backend/pengkatalogan/katalog/create?for=cat&amp;rda=0']'.</msg>
+<arg>xpath=//li/a[@href='/inlislite3/backend/pengkatalogan/katalog/create?for=cat&amp;rda=0']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:35.898144" elapsed="1.471745"/>
+</kw>
+<status status="PASS" start="2024-09-10T10:51:33.858070" elapsed="3.511819"/>
+</kw>
+<kw name="Input Book Data">
+<kw name="Input Text" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:37.370894" level="INFO">Typing text 'judul keempat' into text field 'TagsValue_245'.</msg>
+<arg>TagsValue_245</arg>
+<arg>judul keempat</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:37.370894" elapsed="0.067857"/>
+</kw>
+<kw name="Input Text" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:37.439860" level="INFO">Typing text 'pengarang keempat' into text field 'TagsValue_100'.</msg>
+<arg>TagsValue_100</arg>
+<arg>pengarang keempat</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:37.439860" elapsed="0.130104"/>
+</kw>
+<kw name="Input Text" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:37.571399" level="INFO">Typing text 'penerbitan keempat' into text field 'TagsValue_260_0'.</msg>
+<arg>TagsValue_260_0</arg>
+<arg>penerbitan keempat</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:37.569964" elapsed="0.041287"/>
+</kw>
+<kw name="Input Text" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:37.612259" level="INFO">Typing text 'desc keempat' into text field 'TagsValue_500_0'.</msg>
+<arg>TagsValue_500_0</arg>
+<arg>desc keempat</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:37.611251" elapsed="0.030442"/>
+</kw>
+<kw name="Input Text" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:37.642699" level="INFO">Typing text 'isbn keempat' into text field 'TagsValue_020_0'.</msg>
+<arg>TagsValue_020_0</arg>
+<arg>isbn keempat</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:37.641693" elapsed="0.029876"/>
+</kw>
+<kw name="Click Button" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:37.672569" level="INFO">Clicking button 'id:btnSave2'.</msg>
+<arg>id:btnSave2</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:37.671569" elapsed="0.244903"/>
+</kw>
+<status status="PASS" start="2024-09-10T10:51:37.370894" elapsed="0.545578"/>
+</kw>
+<kw name="Logout Website">
+<kw name="Wait Until Element Is Not Visible" owner="RPA.Browser.Selenium">
+<arg>css=div.modal-backdrop</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-10T10:51:37.917477" elapsed="0.217336"/>
+</kw>
+<kw name="Execute Javascript" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:38.136167" level="INFO">Executing JavaScript:
+swal.close();
+Without any arguments.</msg>
+<arg>swal.close();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-09-10T10:51:38.136167" elapsed="0.005785"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="RPA.Browser.Selenium">
+<arg>xpath=//li[@class="dropdown user user-menu"]/a[contains(@class, 'dropdown-toggle')]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-10T10:51:38.141952" elapsed="0.010041"/>
+</kw>
+<kw name="Click Element" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:38.152997" level="INFO">Clicking element 'xpath=//li[@class="dropdown user user-menu"]/a[contains(@class, 'dropdown-toggle')]'.</msg>
+<arg>xpath=//li[@class="dropdown user user-menu"]/a[contains(@class, 'dropdown-toggle')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-10T10:51:38.151993" elapsed="3.517882"/>
+</kw>
+<kw name="Execute Javascript" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:41.669875" level="INFO">Executing JavaScript:
+return document.querySelector("a[href='/inlislite3/backend/site/logout']");
+Without any arguments.</msg>
+<msg time="2024-09-10T10:51:41.682207" level="INFO">${logout_element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="728a4574-8797-42de-8ce2-2b90b36ead46", element="56cf8a41-b5ce-4a50-a917-4d32c4e67c2c")&gt;</msg>
+<var>${logout_element}</var>
+<arg>return document.querySelector("a[href='/inlislite3/backend/site/logout']");</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-09-10T10:51:41.669875" elapsed="0.012332"/>
+</kw>
+<if>
+<branch type="IF" condition="'${logout_element}' == None">
+<kw name="Fail" owner="BuiltIn">
+<arg>Logout link not found in the DOM</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-09-10T10:51:41.682207" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-09-10T10:51:41.682207" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-09-10T10:51:41.682207" elapsed="0.000000"/>
+</if>
+<kw name="Execute Javascript" owner="RPA.Browser.Selenium">
+<msg time="2024-09-10T10:51:41.683215" level="INFO">Executing JavaScript:
+document.querySelector("a[href='/inlislite3/backend/site/logout']").click();
+Without any arguments.</msg>
+<arg>document.querySelector("a[href='/inlislite3/backend/site/logout']").click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-09-10T10:51:41.683215" elapsed="0.016132"/>
+</kw>
+<status status="PASS" start="2024-09-10T10:51:37.916472" elapsed="3.783888"/>
+</kw>
+<kw name="Close Browser">
+<kw name="Close All Browsers" owner="RPA.Browser.Selenium">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-09-10T10:51:41.701588" elapsed="2.884394"/>
+</kw>
+<status status="PASS" start="2024-09-10T10:51:41.700360" elapsed="2.885622"/>
+</kw>
+<status status="PASS" start="2024-09-10T10:51:15.710831" elapsed="28.875151"/>
+</test>
+<status status="PASS" start="2024-09-10T10:51:14.065818" elapsed="30.521168"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-10T10:51:18.357626" level="WARN">Webdriver version couldn't be read due to: [WinError 193] %1 is not a valid Win32 application</msg>
+<msg time="2024-09-10T10:51:18.444621" level="WARN">The custom provided browser (C:\Program Files\Mozilla Firefox\firefox.exe) might be incompatible with the default downloaded webdriver. Use ``Open Browser`` with these `options` and a compatible `executable_path` if running into issues.</msg>
+<msg time="2024-09-10T10:51:18.748085" level="WARN">The custom provided browser (C:\Program Files\Mozilla Firefox\firefox.exe) might be incompatible with the default downloaded webdriver. Use ``Open Browser`` with these `options` and a compatible `executable_path` if running into issues.</msg>
+</errors>
+</robot>
