@@ -12,11 +12,15 @@ Library    OperatingSystem
 ${API_URL}    http://192.168.9.62:5000
 ${BOOK_ID}    ${EMPTY}
 ${IP_ADDRESS}   ${EMPTY}
+${USERNAME}     ${EMPTY}
+${PASSWORD}     ${EMPTY}
 
 *** Test Cases ***
 Get JSON Data From API
     ${book_id}=    Set Variable    ${BOOK_ID}
     ${ip_address}=    Set Variable    ${IP_ADDRESS}
+    ${username}=    Set Variable    ${USERNAME}
+    ${password}=    Set Variable    ${PASSWORD}
     # Lakukan permintaan ke endpoint API
     Create Session    mysession    ${API_URL}    verify=${False}
     ${response}=    GET On Session    mysession    /api/getBookSinopsis/${book_id}
@@ -31,15 +35,15 @@ Get JSON Data From API
     ${ISBN}=    Get From Dictionary    ${json_data}    isbn
 
     # Log untuk verifikasi
-    Log To Console    Judul: ${JUDUL}
-    Log To Console    Pengarang: ${PENGARANG}
-    Log To Console    Penerbitan: ${PENERBITAN}
-    Log To Console    Deskripsi: ${DESC}
-    Log To Console    ISBN: ${ISBN}
-    Log To Console    IP Address: ${ip_address}
+    # Log To Console    Judul: ${JUDUL}
+    # Log To Console    Pengarang: ${PENGARANG}
+    # Log To Console    Penerbitan: ${PENERBITAN}
+    # Log To Console    Deskripsi: ${DESC}
+    # Log To Console    ISBN: ${ISBN}
+    # Log To Console    IP Address: ${ip_address}
 
     Open website    ${ip_address}
-    Login website
+    Login website   ${username}    ${password}
     Select Library Location
     Click Submit Button
     Navigate to Entri Katalog
@@ -61,8 +65,9 @@ Open website
     Open Available Browser    ${url}
 
 Login website
-    Input Text    id:loginform-username    inlislite
-    Input Text    id:loginform-password    inlislite=
+    [Arguments]    ${username}    ${password}
+    Input Text    id:loginform-username    ${username}
+    Input Text    id:loginform-password    ${password}
     Click Button    name:login-button
 
 Select Library Location
